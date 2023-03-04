@@ -1,0 +1,201 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #8ABBC8;
+
+    header{
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        .img-logo{
+            width: 100px;
+            height: 100px;
+            background-image: url(../imgs/anotacao.png);
+            background-size: cover;
+            margin-top: 20px;
+        }
+    }
+    main{
+        width: 80%;
+        height: 100vh;
+        margin-top: 20px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.103);
+        background-color: #a3ceda7a;
+        border-radius: 10px;
+        position: relative;
+
+        .btn-nova-tarefa{
+            width:230px;
+            height: 65px;
+            display: flex;
+            justify-content: center;
+            margin: 30px;
+            font-size: 1.7rem;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.103);
+            border-radius: 5px;
+            padding: 6px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: rgb(150, 216, 218);
+                transition: all .5s;
+            }
+
+            .img-tarefa{
+                width:50px;
+                margin-right: 10px;
+            }
+
+            .img-tarefa img{
+                width: 100%;
+            }
+
+            p{
+                margin-top: 10px;
+                color: rgb(43, 41, 41);
+            }
+        }
+
+        .tarefas-feitas{
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            row-gap: 50px;
+
+        }
+
+        .tarefa{
+            width: 350px;
+            height: 250px;
+            background-color: rgb(160, 138, 211);
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.534);
+            margin-left: 13px;
+
+            .img-sair-trf{
+                width: 30px;
+                margin: 5px 0 0 90%;
+                cursor: pointer;
+
+                & img{
+                    width: 100%;
+                }
+            }
+
+            & p{
+                text-align: center;
+                margin-bottom: 15px;
+
+                font-size: 1.4rem;
+                color: black
+            }
+
+            & #conteudo-trf{
+                text-align: start;
+                font-size: 1.1rem;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    footer{
+        width: 100%;
+        height: 40px;
+        background-color: #628c97;
+        text-align: center;
+    }
+
+    & p{
+        margin-top: 10px;
+    }
+
+    & a{
+        text-decoration: none;
+
+    }
+
+    .nova-tarefa{
+        width: 450px;
+        height: 370px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: rgb(182, 170, 211);
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.281);
+        position: absolute;
+        top: 30%;
+        z-index: 99;
+
+        .img-sair{
+            margin-left: 90%;
+            width: 25px;
+            cursor: pointer;
+
+            & img{
+                width: 100%;
+                opacity: 85%;
+            }
+        }
+
+        & input{
+            width: 90%;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+            margin: 8px;
+            background-color: rgb(160, 138, 211);
+            color: rgb(235, 235, 235);
+        }
+
+        & #titulo{
+            font-size: 1.3rem;
+        }
+
+        & #conteudo{
+            height: 200px;
+            margin-bottom: 12px;
+        }
+
+        & button{
+            height: 35px;
+            border-radius: 5px;
+            border: none;
+            width: 80%;
+            margin: 0 auto;
+            font-weight: 600;
+            background-color: rgb(232, 206, 250);
+            cursor: pointer;
+
+            &:hover{
+                background-color: rgb(210, 180, 231);
+                transition: all .2s;
+            }
+        }
+    }
+
+    .nova-tarefa-background{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.384);
+        position: absolute;
+    }
+    
+    .some{
+        display: none;
+    }
+}
+
