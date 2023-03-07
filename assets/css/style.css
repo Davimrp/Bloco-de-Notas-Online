@@ -27,7 +27,7 @@ body header .img-logo {
 }
 body main {
   width: 80%;
-  height: 100vh;
+  height: 100%;
   margin-top: 20px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.103);
   background-color: rgba(163, 206, 218, 0.4784313725);
@@ -63,7 +63,7 @@ body main .btn-nova-tarefa p {
 }
 body main .tarefas-feitas {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 50px;
 }
@@ -85,13 +85,9 @@ body main .tarefa .img-sair-trf img {
 body main .tarefa p {
   text-align: center;
   margin-bottom: 15px;
+  word-break: break-all;
   font-size: 1.4rem;
   color: black;
-}
-body main .tarefa #conteudo-trf {
-  text-align: start;
-  font-size: 1.1rem;
-  margin-left: 10px;
 }
 body footer {
   width: 100%;
