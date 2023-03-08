@@ -80,7 +80,7 @@ document.addEventListener('click', (e)=>{
         tarefas.splice(index, 1)
         localStorage.setItem('tarefas', JSON.stringify(tarefas))
 
-        window.location.reload()
+        divTarefa.remove() 
     } 
     
 })

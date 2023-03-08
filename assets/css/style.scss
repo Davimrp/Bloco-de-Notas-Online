@@ -1,3 +1,4 @@
+@import url(animacoes.css);
 
 *{
     margin: 0;
@@ -14,6 +15,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #8ABBC8;
 
+
     header{
         display: flex;
         justify-content: center;
@@ -25,6 +27,7 @@ body{
             background-image: url(../imgs/anotacao.png);
             background-size: cover;
             margin-top: 20px;
+            animation: tilt-in-top-1 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         }
     }
     main{
@@ -34,6 +37,7 @@ body{
         background-color: #a3ceda7a;
         border-radius: 10px;
         position: relative;
+        animation: tilt-in-top-1 .9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
         .btn-nova-tarefa{
             width:230px;
@@ -46,6 +50,7 @@ body{
             border-radius: 5px;
             padding: 6px;
             cursor: pointer;
+            }
 
             &:hover{
                 background-color: rgb(150, 216, 218);
@@ -65,7 +70,6 @@ body{
                 margin-top: 10px;
                 color: rgb(43, 41, 41);
             }
-        }
 
         .tarefas-feitas{
             width: 100%;
@@ -129,6 +133,7 @@ body{
         position: absolute;
         top: 30%;
         z-index: 99;
+        animation: scale-in-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
         .img-sair{
             margin-left: 90%;
@@ -198,12 +203,17 @@ body{
         position: absolute;
     }
     
+    footer{
+        animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
     .some{
         display: none;
     }
 }
 
-@media (max-width: 1024px) {
+
+@media (
+max-width: 1024px) {
 
     body main .tarefas-feitas{
         grid-template-rows: auto;
@@ -222,8 +232,12 @@ body{
         width: 100%;
     }
 
+    body main .btn-nova-tarefa {
+        margin: 20px auto;
+    }
+
     body main .tarefas-feitas{
-        
+        margin-top: 70px;
         grid-template-columns: 1fr;
     }
     body main .tarefa {
@@ -231,6 +245,13 @@ body{
         min-height: 235px;
         margin: auto;
         
+    }   
 
+    body .nova-tarefa {
+        width: 98%;
+    }
+
+    body .nova-tarefa .img-sair{
+        margin-left: 87%;
     }
 }
