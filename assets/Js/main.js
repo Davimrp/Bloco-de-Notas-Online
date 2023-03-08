@@ -45,8 +45,10 @@ function adicionarNovaTarefa(){
     localStorage.setItem('tarefas', JSON.stringify(tarefas));
     document.querySelector('.tarefas-feitas').appendChild(novaTarefa);
     sairDaNovaTarefa();
+    
+    document.querySelector('#titulo').value = ''
+    document.querySelector('#conteudo').value = ''
 }
-
 botaoAdicionar.addEventListener('click', adicionarNovaTarefa);
 
 function abrirNovaTarefa(e){
