@@ -1,5 +1,4 @@
 
-
 *{
     margin: 0;
     padding: 0;
@@ -77,30 +76,34 @@ body{
         }
 
         .tarefa{
+
             max-width: 350px;
             min-height: 235px;
             background-color: rgb(160, 138, 211);
             box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.534);
             margin: 0 13px 0 13px;
             position: relative;
+            overflow-wrap: break-word;
 
             .img-sair-trf{
                 width: 30px;
                 margin: 5px;
                 cursor: pointer;
+                
 
                 & img{
                     width: 100%;
                 }
+
+
             }
 
             & p{
                 text-align: center;
                 margin-bottom: 15px;
                 font-size: 1.4rem;
-                color: black
+                color: black;
             }
-
         }
     }
 
@@ -114,8 +117,8 @@ body{
     }
 
     .nova-tarefa{
-        width: 450px;
-        height: 370px;
+        width: 600px;
+        height: 400px;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -129,7 +132,7 @@ body{
 
         .img-sair{
             margin-left: 90%;
-            width: 25px;
+            width: 35px;
             cursor: pointer;
 
             & img{
@@ -143,18 +146,32 @@ body{
             height: 40px;
             border-radius: 5px;
             border: none;
+            outline: 1px solid rgba(255, 255, 255, 0.13);
             margin: 8px;
             background-color: rgb(160, 138, 211);
             color: rgb(235, 235, 235);
+            padding-left: 10px;
+        }
+
+        #conteudo{
+            font-size: 1.1rem;
+            padding-bottom: 25%;
+            justify-content: flex-start;
+            overflow-wrap: break-word;
+        }
+
+        input:focus{
+            border: 1px solid rgba(255, 255, 255, 0.397);
         }
 
         & #titulo{
+            height: 50px;
             font-size: 1.3rem;
         }
 
         & #conteudo{
             height: 200px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         & button{
@@ -186,3 +203,34 @@ body{
     }
 }
 
+@media (max-width: 1024px) {
+
+    body main .tarefas-feitas{
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    body main .tarefas-feitas{
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 560px) {
+    body main{
+        width: 100%;
+    }
+
+    body main .tarefas-feitas{
+        
+        grid-template-columns: 1fr;
+    }
+    body main .tarefa {
+        width: 90%;
+        min-height: 235px;
+        margin: auto;
+        
+
+    }
+}

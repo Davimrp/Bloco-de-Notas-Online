@@ -74,6 +74,7 @@ body main .tarefa {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.534);
   margin: 0 13px 0 13px;
   position: relative;
+  overflow-wrap: break-word;
 }
 body main .tarefa .img-sair-trf {
   width: 30px;
@@ -96,8 +97,8 @@ body a {
   text-decoration: none;
 }
 body .nova-tarefa {
-  width: 450px;
-  height: 370px;
+  width: 600px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -111,7 +112,7 @@ body .nova-tarefa {
 }
 body .nova-tarefa .img-sair {
   margin-left: 90%;
-  width: 25px;
+  width: 35px;
   cursor: pointer;
 }
 body .nova-tarefa .img-sair img {
@@ -123,16 +124,28 @@ body .nova-tarefa input {
   height: 40px;
   border-radius: 5px;
   border: none;
+  outline: 1px solid rgba(255, 255, 255, 0.13);
   margin: 8px;
   background-color: rgb(160, 138, 211);
   color: rgb(235, 235, 235);
+  padding-left: 10px;
+}
+body .nova-tarefa #conteudo {
+  font-size: 1.1rem;
+  padding-bottom: 25%;
+  justify-content: flex-start;
+  overflow-wrap: break-word;
+}
+body .nova-tarefa input:focus {
+  border: 1px solid rgba(255, 255, 255, 0.397);
 }
 body .nova-tarefa #titulo {
+  height: 50px;
   font-size: 1.3rem;
 }
 body .nova-tarefa #conteudo {
   height: 200px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 body .nova-tarefa button {
   height: 35px;
@@ -156,4 +169,30 @@ body .nova-tarefa-background {
 }
 body .some {
   display: none;
+}
+
+@media (max-width: 1024px) {
+  body main .tarefas-feitas {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  body main .tarefas-feitas {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  body main {
+    width: 100%;
+  }
+  body main .tarefas-feitas {
+    grid-template-columns: 1fr;
+  }
+  body main .tarefa {
+    width: 90%;
+    min-height: 235px;
+    margin: auto;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -29,6 +29,7 @@ function criaElementos(titulo, conteudo){
     conteudoElement.style.textAlign = 'start';
     conteudoElement.style.fontSize = '1.1rem';
     conteudoElement.style.marginLeft = '10px';
+    conteudoElement.style.color = 'rgb(50, 50, 80)';
 
     tituloElement.textContent = titulo;
     conteudoElement.textContent = conteudo;
