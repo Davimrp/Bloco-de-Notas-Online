@@ -48,7 +48,7 @@ body main .btn-nova-tarefa {
   padding: 6px;
   cursor: pointer;
 }
-body main:hover {
+body main .btn-nova-tarefa:hover {
   background-color: rgb(150, 216, 218);
   transition: all 0.5s;
 }
